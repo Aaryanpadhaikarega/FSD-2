@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from './logo.svg'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
