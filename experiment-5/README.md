@@ -1,16 +1,52 @@
-# React + Vite
+# Experiment 5: Optimize Frontend Performance using Lazy Loading
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Aim
+To optimize the performance of a React application by implementing lazy loading and code splitting so that components are loaded only when required.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Learning Objectives
+- Understand frontend performance issues
+- Explain the concept of code splitting
+- Implement lazy loading using React.lazy()
+- Use Suspense for fallback UI
+- Observe performance improvement using browser developer tools
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Theory
+Frontend performance refers to how fast a web application loads and responds to user interactions. Large JavaScript bundles increase initial load time and negatively impact performance.
 
-## Expanding the ESLint configuration
+Lazy loading is a performance optimization technique in which components are loaded only when they are needed. React provides `React.lazy()` for dynamic imports and `Suspense` to show fallback UI while the component is loading.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This approach reduces the initial bundle size and improves page load speed.
+
+---
+
+## Key Concepts
+
+| Concept | Description |
+|------|------------|
+| Code Splitting | Dividing JavaScript bundle into smaller chunks |
+| React.lazy() | Dynamically imports components |
+| Suspense | Displays fallback UI during loading |
+| Lazy Loading | Loads components only when required |
+
+---
+
+## Tools & Technologies Used
+- React
+- Vite
+- JavaScript (ES6)
+- Git & GitHub
+- Netlify (for deployment)
+
+---
+
+## Project Setup
+
+```bash
+npm create vite@latest experiment-5 -- --template react
+cd experiment-5
+npm install
+npm run dev
