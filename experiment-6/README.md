@@ -1,16 +1,55 @@
-# React + Vite
+# Experiment 6  
+## Handle Forms and Validation using Material UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+##  Aim
+To design an interactive form using **Material UI components** and implement **client-side validation** using **React**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Learning Objectives
+After completing this experiment, the student will be able to:
+- Use Material UI form components
+- Create controlled form inputs in React
+- Implement client-side validation logic
+- Display validation error messages
+- Handle form submission events
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Theory
+Forms are an essential part of web applications as they are used to collect user input.  
+In **React**, forms are implemented using **controlled components**, where input values are managed through state.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Validation** ensures that the data entered by the user is correct before submission.
+
+**Material UI (MUI)** is a popular React UI library that provides pre-styled components such as:
+- `TextField`
+- `Button`
+- `Container`
+- `Typography`
+
+These components help create responsive and professional-looking forms quickly.
+
+---
+
+##  Key Concepts
+
+| Concept | Description |
+|------|------------|
+| Controlled Components | Input values controlled using React state |
+| Validation | Ensures correctness of user input |
+| Error Handling | Displays feedback to users |
+| Material UI | UI component library for React |
+
+---
+
+##  Project Setup
+
+```bash
+npm create vite@latest exp6-forms -- --template react
+cd exp6-forms
+npm install
+npm install @mui/material @emotion/react @emotion/styled
+npm run dev
