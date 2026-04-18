@@ -1,0 +1,34 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Backend
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Backend Test
+        run: |
+          cd backend
+          python -m pip install flask pytest
+          python -m pytest
+
+      # Frontend
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Frontend Test
+        run: |
+          cd frontend
+          npm install
+          npx vitest run
