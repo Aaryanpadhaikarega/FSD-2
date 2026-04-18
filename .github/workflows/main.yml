@@ -7,28 +7,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Backend
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Backend Test
         run: |
-          cd backend
+          cd FSD-2/experiment-16/backend
           python -m pip install flask pytest
           python -m pytest
 
       # Frontend
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
 
       - name: Frontend Test
         run: |
-          cd frontend
+          cd FSD-2/experiment-16/frontend
           npm install
+          npm install jsdom
           npx vitest run
