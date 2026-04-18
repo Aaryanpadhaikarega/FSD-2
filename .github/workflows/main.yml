@@ -17,7 +17,7 @@ jobs:
 
       - name: Backend Test
         run: |
-          cd FSD-2/experiment-16/backend
+          cd experiment-16/backend
           python -m pip install flask pytest
           python -m pytest
 
@@ -29,7 +29,7 @@ jobs:
 
       - name: Frontend Test
         run: |
-          cd FSD-2/experiment-16/frontend
+          cd experiment-16/frontend
           npm install
           npm install jsdom
           npx vitest run
